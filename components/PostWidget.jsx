@@ -34,7 +34,6 @@ const PostWidget = ({ categories, slug }) => {
               alt={post.title}
               height="60px"
               width="60px"
-              unoptimized
               className="rounded-full align-middle"
               src={post.featuredImage.url}
             />
@@ -44,6 +43,7 @@ const PostWidget = ({ categories, slug }) => {
             <p className="font-xs text-gray-500">
               {moment(post.createdAt).format('MMM DD, YYYY')}
             </p>
+
             <Link href={`/post/${post.slug}`} className="text-md" key={index}>
               {post.title}
             </Link>
